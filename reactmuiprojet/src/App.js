@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { Button, Container, } from "@mui/material";
+
+import { ThemeProvider } from '@mui/material/styles';
+import theme from "./styles/theme";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  useEffect(() => {
+    document.title = "react mui-Home";
+  }, []);
 
-export default App
+  return (
+    <ThemeProvider theme={theme}>
+      <Container
+        sx={{
+          background: "#fff",
+        }}
+        maxWidth="xl"
+      >
+        <Button variant="contained" color="primary">
+          text
+        </Button>
+      </Container>
+    </ThemeProvider>
+  );
+};
+
+export default App;
