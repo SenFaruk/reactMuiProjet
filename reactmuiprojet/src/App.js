@@ -3,6 +3,7 @@ import { Button, Container, } from "@mui/material";
 
 import { ThemeProvider } from '@mui/material/styles';
 import theme from "./styles/theme";
+import Appbar from "./components/appbar";
 
 const App = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const App = () => {
         }}
         maxWidth="xl"
       >
+        <Appbar />
         <Button variant="contained" color="primary">
           text
         </Button>
